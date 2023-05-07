@@ -141,20 +141,34 @@ button:hover {
   background-color: rgba(211, 211, 211, 0.07);
 }
 
+@keyframes item-animation {
+  0% {
+    translateY: -20px
+  }
+  50%{
+    translateY: -10px;
+  }
+
+  100%{
+    translateY: 0px
+  }
+}
+
 .items {
   position: absolute;
   z-index: 10;
   top: 60px;
   right: 0;
   background-color: #203139;
-  border-radius: 2px;
   padding: 10px;
+  border-radius: 10px;
 }
 
 .items button {
   background-color: transparent;
   padding: 8px;
   color: white;
+  animation: .6s ease-in-out item-animation;
 }
 
 .items button:hover {
